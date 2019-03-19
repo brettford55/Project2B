@@ -39,26 +39,69 @@ public class GameStatus : MonoBehaviour
             
             Time.timeScale = 0;
 
-            if (PlayerPrefs.GetInt("Highscore") < currentScore) 
-                PlayerPrefs.SetInt("Highscore", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore2") < currentScore)
+            if (PlayerPrefs.GetInt("Highscore") < currentScore)
+            {
+               temp = PlayerPrefs.GetInt("Highscore");
+               PlayerPrefs.SetInt("Highscore", currentScore);
+               currentScore = temp;
+            }
+
+            if (PlayerPrefs.GetInt("Highscore2") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore2");
                 PlayerPrefs.SetInt("Highscore2", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore3") < currentScore)
+                currentScore = temp;
+            }
+
+            if (PlayerPrefs.GetInt("Highscore3") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore3");
                 PlayerPrefs.SetInt("Highscore3", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore4") < currentScore)
+                currentScore = temp;
+            }
+
+
+            if (PlayerPrefs.GetInt("Highscore4") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore4");
                 PlayerPrefs.SetInt("Highscore4", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore5") < currentScore)
+                currentScore = temp;
+            }
+
+            if (PlayerPrefs.GetInt("Highscore5") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore5");
                 PlayerPrefs.SetInt("Highscore5", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore6") < currentScore)
+                currentScore = temp;
+            }
+            if (PlayerPrefs.GetInt("Highscore6") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore6");
                 PlayerPrefs.SetInt("Highscore6", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore7") < currentScore)
+                currentScore = temp;
+            }
+            if (PlayerPrefs.GetInt("Highscore7") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore7");
                 PlayerPrefs.SetInt("Highscore7", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore8") < currentScore)
+                currentScore = temp;
+            }
+            if (PlayerPrefs.GetInt("Highscore8") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore8");
                 PlayerPrefs.SetInt("Highscore8", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore9") < currentScore)
+                currentScore = temp;
+            }
+            if (PlayerPrefs.GetInt("Highscore9") < currentScore)
+            {
+                temp = PlayerPrefs.GetInt("Highscore9");
                 PlayerPrefs.SetInt("Highscore9", currentScore);
-            else if (PlayerPrefs.GetInt("Highscore10") < currentScore)
+                currentScore = temp;
+            }
+            if (PlayerPrefs.GetInt("Highscore10") < currentScore)
+            {
                 PlayerPrefs.SetInt("Highscore10", currentScore);
+            }
 
             scoreText.text = "Score:" + startingScore.ToString();
             livesText.text = ($"Lives:{startingLives.ToString()} / {startingLives.ToString()}");
